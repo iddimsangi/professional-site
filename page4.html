@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="XING Campus shows you job options for your field of study. Get to know which career paths other XING users choose who studied the same than you" name="description" />
+    <title>XING Campus: Jobs matching your course of study</title>
+    <meta name="referrer" content="default">
+
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="onoDY9wIrRAos0VWr8J+bIXg/oax3jcqlQwo60mOs8LgMltCsaKERqPb+no1eQOLOWnQfYjPEh+2BJXbY9HAbQ==" />
+
+
+      <meta name="logjam-request-id" content="campus-production-fec54b35029c4017a3665d74b6d7a214">
+    <meta name="logjam-action" content="App::FieldOfStudiesController#index">
+    <meta name="logjam-collector" content="https://www.xing.com/logjam/">
+
+
+      <meta content="100000394517649" property="fb:admins" /><meta content="XING Campus" property="og:title" /><meta content="https://www.xing.com/campus?ref=xing_nav" property="og:url" /><meta content="https://www.xing.com/assets/campus-app/facebook-og-image-6f41938ebed9b1947b2b687b6ffe53a3.png" property="og:image" /><meta content="XING Campus shows you potential career opportunities after you finish your degree and which skills are in demand in various occupations." property="og:description" /><meta content="XING AG" property="og:site_name" /><meta content="website" property="og:type" />
+
+    <link rel="search" type="application/opensearchdescription+xml" title="XING" href="/media/xing-opensearch.xml">
+
+
+    <link rel="shortcut icon" href="https://www.xing.com/assets/frontend_minified/img/shared/xing_r1.ico" type="image/ico">
+<link rel="apple-touch-icon" href="https://www.xing.com/assets/frontend_minified/img/shared/xing_icon_apple.png">
+
+
+      <link rel="stylesheet" media="screen" href="https://www.xing.com/assets/frontend_minified/css/general-d13e5fdc28ac94a4d6c8f4e5e75cf59f.css" />
+
+
+<!--[if IE 9]>
+  <link rel="stylesheet" media="screen" href="https://www.xing.com/assets/frontend_minified/css/ie_filter-e7da014d6eb1c1b231c98e0f18b3f8b5.css" />
+<![endif]-->
+
+      <link rel="stylesheet" media="all" href="/assets/campus-app/application-fac23d4d7a1b6fe39434b7cae2b22ad3.css" />
+    
+
+
+    <script>
+      window.storableAssets = {'css/webfont.css': ["https://www.xing.com/assets/frontend_minified/css/webfont-6ee69c71412d8bbc162bf9feaca16775.css"]};
+    </script>
+
+      <script>
+    window.storableAssets = {'css/webfont.css': ["https://www.xing.com/assets/frontend_minified/css/webfont-6ee69c71412d8bbc162bf9feaca16775.css"]};
+  !function(e){var t,n,r=[];e.xing={globals:{assets:{}},browser:{},mixIn:function(e){e=e||{};for(var t,n,r=0,o=arguments.length;++r<o;){n=arguments[r];for(t in n)n.hasOwnProperty(t)&&(e[t]=n[t])}return e},load:function(o){function a(){if(!--s)for(;i=c.shift();)if(e.execScript?e.execScript(i.responseText):e.eval.call(e,i.responseText),!c.length){for(;t=r.shift();)t();n=!0}}for(var i,c=[],s=o.length;i=o.shift();){var f=e.XDomainRequest&&-1===i.indexOf(location.host)?new XDomainRequest:new XMLHttpRequest;f.open("get",i),f.onload=a,f.send(),c.push(f)}},ready:function(e){var t,o;return"function"!=typeof e&&(t=e,e=function(){xing.require(t).afterLoad(function(){o&&o()})}),n?e():r.push(e),{afterLoad:function(e){o=e}}}}}(this),xing.renderStorage=function(e,t,n,r){var o,a,i,c,s=0,f={},u=window.sessionStorage;if(a=u&&u[t]){if(!(c=document.querySelectorAll(e)).length)return;try{f=JSON.parse(a)}catch(l){}for(;s<c.length;s++)i=c[s],(o=parseInt(f[i.getAttribute("data-update")]))&&(o>=r&&(o=r-1,i.setAttribute("data-update-exceed","")),i.innerHTML=o,i.style.display="")}},function(e){function t(e,t){return t?e.replace("-"+t,""):e}function n(e){var t=e.match(r);return t?t[1]:null}var r=/[a-z0-9-_]-([a-z0-9]+)\./,o="undefined"!=typeof Storage,a=new RegExp(location.protocol+"//"+location.host+"(/[a-z-_0-9]+)+/webfont-[a-z0-9]+.css");try{Object.keys(e).forEach(function(t){a.test(t)&&e.removeItem(t)})}catch(i){}xing.asset={read:function(r){if(o){var a,i=n(r);r=t(r,i);try{a=JSON.parse(e.getItem(r))}catch(c){}return!a||i&&i!==a.hash?void 0:a.content}},write:function(r,a){if(o){var i=n(r);r=t(r,i);try{e.setItem(r,JSON.stringify({content:a,hash:i}))}catch(c){}}}}}(localStorage),function(e){var t=[],n=window.storableAssets,r=xing.ready,o=n&&Object.keys(n),a="undefined"!=typeof Storage,i="";if(n){if(a)if(o.forEach(function(e){n[e].forEach(function(e){var n;t.push(e),n=xing.asset.read(e)||"",i+=-1===n.indexOf("<")&&n})}),i){var c=e.createElement("style");c.textContent=i;var s=e.querySelector("script");s.parentNode.insertBefore(c,s)}else r(o);else r(o);r(function(){xing.on("ajax:done",function(e,n){a&&t.indexOf(n.url)>-1&&n.data&&xing.asset.write(n.url,n.data)})})}}(document);
+  window.onload = function () {
+    setTimeout(function run() {
+      xing.load(["https://www.xing.com/assets/frontend_minified/js/asset_map-321fd1a4c26f48c5e0c0747e26bd21a0.js","https://www.xing.com/assets/frontend_minified/js/xing_async-60000026dd5291c969eef1c81b99ffde.js","https://www.xing.com/assets/campus-app/application-9d39eb8ce7e42826cfa10deeaf26f037.js"]);
+    });
+  };
+</script>
+
+
+    <script>
+  var xing = xing || {};
+  xing.user = {
+    id: "25525555",
+      hashed_id: "8eb82cfdd9e352b411c2c27be8cdab1317f093a2",
+    location: "tz",
+    language: "en"
+  };
+
+  xing.globals = xing.mixIn(xing.globals || {}, {
+    baseUrl: "https://www.xing.com",
+
+    countryCode: "TZ",
+
+    reklame:{base:"https://ad.de.doubleclick.net/N3673",type:"/adi",unit:"/xing"},
+
+
+    confirmPresets:{"delete":{title:"Really delete?",okLabel:"Yes, do it!"}},
+    toTop:"Top",
+    commonTexts:{cancel:"Cancel",close:"Close window","continue":"OK",unknownError:"It looks like something went wrong, sorry! Please try again later."}
+  });
+
+
+  xing.globals.assets = xing.mixIn(xing.globals.assets || {}, {
+    _host: "https://www.xing.com",
+    _origin: "/assets/frontend_minified/"
+  });
+
+  (function(w) {
+    xing.mixIn(Date,{MONTH_NAMES:"January,February,March,April,May,June,July,August,September,October,November,December".split(","),DAY_NAMES:"Mo,Tu,We,Th,Fr,Sa,Su".split(","),FORMAT:"MM/DD/YYYY",HINT:"MM/DD/YYYY",LABELS:{MONTH_PREV:"previous",MONTH_NEXT:"next",TODAY:"today",SELECTION:"selection",CLOSE:"Close"}});
+
+      w.alert = xing.noop;if("console" in w){try{w.console.log=xing.noop;}catch(e){}}
+  })(this);
+
+  xing.ready(function() {I18n.defaultLocale = "de";I18n.locale = "en";});
+</script>
+
+    
+  </head>
+
+  <body class="basic-user foundation-grid foundation-adaptive-grid foundation-cards campus-site">
+  <a href="#content" class="skip-link">Skip navigation</a>
+
+  <div class="foundation-root container">
+
+      <header>
+          <div class="quick-settings" data-content-loader="/app/user?op=get_quick_settings" style="display:none"></div>
+          <div class="content-center">
+    <div class="foundation-collapsable">
+      <a class="navigation navigation-main-logo-big header-xing-logo" href="/app/startpage">
+        XING – For a better working life
+      </a>
+    </div>
+
+  <div class="foundation-grid-space">
+    <div class="foundation-row">
+      <div class="foundation-col-12">
+        <div class="foundation-row">
+
+            <div class="foundation-col-8 header-search">
+  <div class="foundation-row">
+    <div class="foundation-col-push-1 foundation-col-5 pos-rel">
+      <form action="/search/members?sc_o=da980_b" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input type="hidden" name="hdr" value="1">
+        <input type="text" name="keywords" value="" maxlength="255" class="text" placeholder="Find jobs, contacts, events...">
+        <div id="sps-head" style="display: none;"></div>
+        <button onclick="s_objectID='NAV_SEARCH';" value="find" type="submit" class="main-search-button foundation-icon-core-search">Search</button>
+</form>    </div>
+    <div class="foundation-col-2">
+      <div class="inline-block pos-rel">
+        <span class="header-trigger-advanced">
+          Advanced Search
+          <i class="foundation-icon-shape-arrow-down header-arrow"></i>
+        </span>
+        <ul class="dropdown" style="display:none">
+          <li class="txl first">What are you looking for?</li>
+          <li class="txl">
+            <a class="advanced-search" href="/search/members?advanced_form=open&amp;sc_o=da980_c">
+              <i class="foundation-icon-navigation-contacts xtsearch-icon"></i>
+              Members
+            </a>
+          </li>
+          <li class="txl">
+            <a class="advanced-search" href="/search/jobs?advanced_form=open&amp;hrd=1&amp;sc_o=da980_c">
+              <i class="foundation-icon-navigation-jobs xtsearch-icon"></i>
+              Jobs
+            </a>
+          </li>
+          <li class="txl">
+            <a class="advanced-search" href="/search/events?advanced_form=open&amp;hrd=1&amp;sc_o=da980_c">
+              <i class="foundation-icon-navigation-events xtsearch-icon"></i>
+              Events
+            </a>
+          </li>
+          <li class="txl">
+            <a class="advanced-search" href="/search/news?advanced_form=open&amp;hrd=1&amp;sc_o=da980_c">
+              <i class="foundation-icon-navigation-news xtsearch-icon"></i>
+              News
+            </a>
+          </li>
+          <li class="txl">
+            <a class="advanced-search" href="/search/communities?advanced_form=open&amp;hrd=1&amp;sc_o=da980_c">
+              <i class="foundation-icon-navigation-communities xtsearch-icon"></i>
+              Groups
+            </a>
+          </li>
+          <li class="txl">
+            <a class="advanced-search" href="/search/companies?advanced_form=open&amp;hrd=1&amp;sc_o=da980_c">
+              <i class="foundation-icon-navigation-companies xtsearch-icon"></i>
+              Companies
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+              <div class="foundation-col-4 header-settings foundation-new-form">
+                  <a href="/help" class="header-trigger-help">Help</a>
+
+                <div class="header-trigger-personal pos-rel">
+                  <a class="header-personal element-form-button-gray foundation-icon-core-settings" href="#" data-simplelayer="next">
+                    <i class="foundation-icon-shape-arrow-down header-arrow"></i>
+                  </a>
+                  <ul class="dropdown" style="display:none;">
+                    <li>
+                      <a class="header-upsell-premium personal-item" href="/upsell/premium?reagent=uplt_284">
+                        Premium membership
+                      </a>
+                    </li>
+                    <li>
+                      <a class="header-upsell-projobs personal-item" href="/upsell/projobs?reagent=uplt_283">
+                        ProJobs add-on
+                      </a>
+                    </li>
+
+
+
+
+
+
+                    <li>
+                      <a class="personal-item" href="/app/settings?op=account">
+                        Settings/Invoices &amp; Accounts
+                      </a>
+                    </li>
+                    <li>
+                      <a class="personal-item" href="/login/logout">
+                        Logout
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <a href="/contacts/recommendations" class="element-form-button-solid-lime header-trigger-contacts">
+                  Find new contacts
+                </a>
+
+                    <a href="/upsell/premium?reagent=uplt_95" id="myxing-premfix" class="sign">
+                      Go Premium now! <span>More info</span>
+                    </a>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </header>
+
+    
+
+
+    <main class="content-center ">
+          <div class="foundation-collapsable data-tooltip-right">
+            <!--
+  a "NEW" flag looks like:
+  <span class="flag-note navigation-vertical-new" style="visibility:hidden">NEW</span>
+
+  ATTENTION because of NAVI-33:
+    - only the first available "NEW" flag is shown
+    - a "NEW" flag must only be used for a new product but not to point to new features
+-->
+<nav>
+<ul class="component-navigation-vertical">
+  <li class="myxing-profile">
+    <a class="myxing-profile-anchor" href="/profile/iddi_msangi?sc_o=mxb_p" data-tooltip="Profile">
+      
+<span class="element-user-image element-user-image-64x64 myxing-profile-image">
+  <img alt="iddi msangi" data-img-src="https://www.xing.com/assets/frontend_minified/img/users/nobody_m.64x64.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="64" height="64" />
+</span>
+
+      <span class="myxing-profile-name">iddi msangi</span>
+        <span class="myxing-profile-membership">Basic</span>
+    </a>
+  </li> <!-- user picture / name -->
+
+
+    <li class="navigation-vertical-item">
+      <a class="navigation-vertical-anchor foundation-icon-navigation-startpage" href="/app/startpage" data-tooltip="My start page">
+        My start page
+        <span class="flag-notification navigation-vertical-notification" data-update="home" style="display:none"></span>
+      </a>
+    </li>
+
+    <li class="navigation-vertical-item ">
+      <a class="navigation-vertical-anchor foundation-icon-navigation-contacts" href="/app/contact" data-tooltip="My contacts">
+        My contacts
+        <span class="flag-notification navigation-vertical-notification" data-update="contact_requests" style="display:none"></span>
+      </a>
+    </li>
+
+    <li class="navigation-vertical-item ">
+      <a class="navigation-vertical-anchor foundation-icon-navigation-messages" href="/messages/conversations" data-tooltip="My messages">
+        My messages
+        <span class="flag-notification navigation-vertical-notification" data-update="unread_conversations" style="display:none"></span>
+      </a>
+    </li>
+
+      <li class="navigation-vertical-item ">
+        <a class="navigation-vertical-anchor navigation-premium navigation-upsell" href="/premium?sc_o=mxb_pre;reagent=uplt_76" data-tooltip="Premium Section - Go Premium now!">
+          Premium Section
+          <span class="navigation-vertical-subline">Go Premium now!</span>
+        </a>
+      </li>
+</ul>
+
+<ul class="component-navigation-vertical component-navigation-vertical-other">
+    <li class="navigation-vertical-item open">
+      <a class="navigation-vertical-anchor foundation-icon-profile-education" href="/campus?ref=xing_nav" data-tooltip="Campus">
+        Campus
+      </a>
+    </li>
+
+  <li class="navigation-vertical-item ">
+    <a class="navigation-vertical-anchor foundation-icon-navigation-jobs" href="/jobs" data-tooltip="Jobs">
+      Jobs
+      <span class="flag-notification navigation-vertical-notification" data-update="jobs" style="display:none"></span>
+    </a>
+  </li>
+
+  <li class="navigation-vertical-item ">
+    <a class="navigation-vertical-anchor foundation-icon-navigation-events" href="/events?sc_o=mxb_e_da207" data-tooltip="Events">
+      Events
+      <span class="flag-notification navigation-vertical-notification" data-update="events" style="display:none"></span>
+    </a>
+  </li>
+
+  <li class="navigation-vertical-item ">
+    <a class="navigation-vertical-anchor foundation-icon-navigation-news" href="/news?sc_o=b7916_mxb" data-tooltip="News">
+      News
+      <span class="flag-notification navigation-vertical-notification" data-update="news" style="display:none"></span>
+    </a>
+  </li>
+
+  <li class="navigation-vertical-item ">
+    <a class="navigation-vertical-anchor foundation-icon-navigation-communities" href="/communities" data-tooltip="Groups">
+      Groups
+      <span class="flag-notification navigation-vertical-notification" data-update="groups_web" style="display:none"></span>
+    </a>
+  </li>
+
+  <li class="navigation-vertical-item ">
+    <a class="navigation-vertical-anchor foundation-icon-navigation-companies" href="/companies" data-tooltip="Companies">
+      Companies
+    </a>
+  </li>
+
+  <li class="navigation-vertical-item ">
+    <a class="navigation-vertical-anchor foundation-icon-navigation-projects" href="/projects" data-tooltip="Projects">
+      Projects
+    </a>
+  </li>
+
+
+  <li class="navigation-vertical-item navigation-vertical-item-secondary navigation-spacer">
+    <a class="navigation-vertical-anchor foundation-icon-navigation-business-services" href="/app/user?op=xing_services.business" data-tooltip="Business solutions">
+      Business solutions
+    </a>
+  </li>
+
+  <li class="navigation-vertical-item navigation-vertical-item-secondary">
+    <a class="navigation-vertical-anchor foundation-icon-navigation-other-services" href="/app/user?op=xing_services.other" data-tooltip="Other services">
+      Other services
+    </a>
+  </li>
+</ul>
+</nav>
+
+  <script>
+    (function() {
+      var list = ["home", "contact_requests", "unread_conversations", "jobs", "events", "news", "groups_web"];
+      xing.renderStorage(".component-navigation-vertical [data-update]", "navigation", list, 100);
+
+      list.forEach.call(document.querySelectorAll(".navigation-vertical-new"), function(label) {
+        if (label.offsetLeft > 145) {
+          label.className += " navigation-vertical-new-stopped";
+        }
+        label.style.visibility = "";
+      });
+
+      xing.ready("js/navigation.js");
+    })();
+  </script>
+
+          </div>
+
+      <div class="foundation-grid-space" id="content">
+        
+        <div id="maincontent" class="campus-app" data-qa="e56806d8">
+          <noscript>
+            <div class="foundation-row">
+              <div class="foundation-col-12">
+                <div class="app-message app-message-error">
+                  <div class="app-message-body"><p>Please <a href="/app/user?op=javascript_howto">activate JavaScript</a> to use XING.</p></div>
+                </div>
+              </div>
+            </div>
+          </noscript>
+
+          <div class="foundation-row">
+            <div class="foundation-col-12">
+
+              <ul class="breadcrumb-nav"><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="homebase"><a href="/" class=" foundation-icon-navigation-startpage"><span class="breadcrumb-home"></span></a></li> <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="">Campus</li> </ul>
+              <div class="home"><div class="campus-card"><div class="home__headertile home__new-headertile"><h1>XING Campus</h1><h3 class="fs-h1">Find out which job matches your course of study.</h3><form class="field-of-study__form-new"><fieldset><div class="fs-h1" id="field-of-study"><span class="field-of-study__form--inputcontainer" data-locale="en" data-logged_in="true" data-url="/campus/en/study/"><input class="typeahead field-of-study__form-input fs-h2" placeholder="Enter your course of study here." type="text" /><input class="element-form-button-salmon" id="submit_btn" type="submit" value="Get started now" /><i class="foundation-icon-shape-cross-circle field-of-study__form-input--cancel js-cancel"></i><span class="field-of-study__form-input__add-button js-save button">Add</span></span></div></fieldset></form></div></div><div class="campus-card"><div class="home__midinfotile" id="job-guide"><i class="home__icon--singlearrow"></i><h2 class="home__midinfotile--mainheader fs-xxl">XING Campus gives you:</h2><p class="home__midinfotile--maintext standard-font">XING Campus shows you potential career opportunities after you finish your degree by reviewing millions of XING member CVs to provide useful and realistic statistics.</p><i class="home__icon--doublearrow"></i><div class="home__midinfotile--left"><i class="home__midinfotile--illu"></i><h2 class="fs-xxl">Job guide</h2><p class="home__midinfotile--text standard-font">Find out which jobs other XING members have who studied the same as you.</p><a class="jobguide-button js-focus-on-input" href="#"><button class="button-transparent button-color-salmon">Enter course of study</button></a></div><div class="home__midinfotile--right"><i class="home__midinfotile--illu home__midinfotile--jobpediaillu"></i><h2 class="fs-xxl">Jobpedia</h2><p class="home__midinfotile--text standard-font">What kind of job are you interested in? Here you can find out about the tasks and duties of hundreds of jobs.</p></div></div></div><div class="clfx"></div><div class="job_offers campus-card" id="job-offers"><div class="job_offers__tile intern"><div class="job_offers__jobcount">73.874</div><div class="job_offers__content"><h2 class="fs-h1 job_offers__header">Internships &amp; student jobs</h2><p class="job_offers__desc standard-font">Put theory into practice and gain valuable working experience during your studies.</p><a id="job-teaser-intern" href="/search/in/jobs?nrs=1&amp;filters[level][]=1"><button class="button-transparent job_offers__button">Find internships &amp; jobs</button></a></div></div><div class="job_offers__tile entry"><div class="job_offers__jobcount">80.975</div><div class="job_offers__content"><h2 class="fs-h1 job_offers__header">Entry-level positions</h2><p class="job_offers__desc standard-font">Find the right employer to kick off your career right after graduation.</p><a id="job-teaser-entry" href="/search/in/jobs?nrs=1&amp;filters[level][]=2"><button class="button-transparent job_offers__button">Check out job offers</button></a></div></div></div><div class="campus-card company"><div class="company__tile" id="companies"><h2>Company</h2><h3>Follow interesting companies and receive their latest job vacancies.</h3><a href="/companies"><button class="button-transparent button-color-white">Find company</button></a><br /><p class="fs-small">Examples of interesting companies</p><ul class="company__logos"><li><a href="/company/siemensag"><img src="/assets/campus-app/company_logos/Siemens-4bca2136161ab13b4328e815ccfe2699.svg" alt="Siemens" /></a></li><li><a href="/company/trivago"><img src="/assets/campus-app/company_logos/Trivago-c861bcabd2203609f9525752e307a419.svg" alt="Trivago" /></a></li><li><a href="/companies/deutschetelekomag"><img src="/assets/campus-app/company_logos/Deutsche-Telekom-b5e1ef0c7d77afa877c52bc0c02ab086.svg" alt="Deutsche telekom" /></a></li><li><a href="/company/zalando"><img src="/assets/campus-app/company_logos/Zalando-bf13b6dea2cf516a0dacb7bee7e9799c.svg" alt="Zalando" /></a></li></ul></div></div><div class="magazineteaser campus-card"><div id="magazineteaser"><div class="magazineteaser__mobiletop foundation-show-phone"></div><div class="magazineteaser__tile"><div class="magazineteaser__toptile"><i class="magazineteaser__icon-magazine"></i><div class="magazineteaser__claimcontainer"><h1>Campus Magazine</h1><h3>Learn everything you need to know to get ready for your first job.</h3><a href="https://www.xing.com/campus/magazine"><button class="button-transparent magazineteaser__button button-color-primary-font">Go to magazine</button></a></div></div></div></div></div><div class="campus-card"><div class="application-teaser swiper-container swiper-no-breakpoints"><div class="swiper-wrapper" id="lab"><div class="application-teaser__lefttile application-teaser__tile swiper-slide"><div class="tile tile--bordered"><span class="application-teaser__icon"></span><h2 class="fs-h1">CV</h2><p class="fs-h4">Tips &amp; tricks</p><p class="application-teaser__desc">Create a perfect CV in just 5 minutes</p><a class="external_links" target="_blank" href="https://lebenslauf.com/"><button class="button-color-salmon">Try it</button></a></div></div><div class="application-teaser__midtile application-teaser__tile swiper-slide"><div class="tile tile--bordered"><span class="application-teaser__icon"></span><h2 class="fs-h1">Cover letter</h2><p class="fs-h4">Tips &amp; tricks</p><p class="application-teaser__desc">Write your own professional cover letters</p><a class="external_links" target="_blank" href="https://anschreiben.com/"><button class="button-color-salmon">Test now</button></a></div></div><div class="application-teaser__righttile application-teaser__tile swiper-slide"><div class="tile tile--bordered"><span class="application-teaser__icon"></span><h2 class="fs-h1">Application</h2><p class="fs-h4">Tips &amp; tricks</p><p class="application-teaser__desc">Job application tips</p><a class="external_links" target="_blank" href="https://bewerbung.com/"><button class="button-color-salmon">Learn more</button></a></div></div></div><div class="swiper-pagination"></div><div class="swiper-button-prev foundation-icon-shape-arrow-left teaser-arrow teaser-arrow-left"></div><div class="swiper-button-next foundation-icon-shape-arrow-right teaser-arrow teaser-arrow-right"></div><div class="application-teaser__navigation"></div></div></div></div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    
+
+    <footer>
+        <div id="quicklinks">
+    <div class="content-center">
+        <div class="foundation-collapsable">&nbsp;</div>
+      <div class="foundation-grid-space">
+        <div class="foundation-row">
+          <div class="foundation-col-4">
+            <dl class="footer-links first">
+              <dt>About XING</dt>
+              <dd>
+                  <a href="https://www.xing.com/help">
+                    Help &amp; Contact
+                  </a>
+              </dd>
+              <dd>
+                  <a href="https://corporate.xing.com/no_cache/english/unternehmen/xing-ag/" target="corporate">
+                    XING AG
+                  </a>
+              </dd>
+              <dd>
+                <a href="https://corporate.xing.com/deutsch/karriere/" target="corporate">
+                  Careers at XING
+                </a>
+              </dd>
+              <dd>
+                <a href="https://corporate.xing.com/deutsch/investor-relations/" target="corporate">
+                  Investor Relations
+                </a>
+              </dd>
+              <dd>
+                <a href="https://corporate.xing.com/deutsch/presse/willkommen/" target="corporate">
+                  Press
+                </a>
+              </dd>
+              <dd>
+                <a href="https://www.xing.com/communities/groups/xing-community-1000150">
+                  Community
+                </a>
+              </dd>
+              <dd>
+                <a href="https://blog.xing.com/category/german" target="blog">
+                  Blog
+                </a>
+              </dd>
+              <dd>
+                <a href="https://devblog.xing.com" target="devblog">
+                  Devblog
+                </a>
+              </dd>
+              <dd>
+                <a href="https://dev.xing.com" target="developers">
+                  Developers
+                </a>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="foundation-col-4">
+            <dl class="footer-links">
+              <dt>Apps &amp; Tools</dt>
+              <dd>
+                <a href="https://www.xing.com/apps">
+                  Mobile &amp; desktop apps
+                </a>
+              </dd>
+              <dd>
+                <a href="https://futureme.xing.com" target="futureme">
+                  FutureMe
+                </a>
+              </dd>
+              <dd>
+                <a href="https://dev.xing.com/plugins/login_with" target="xinglogin">
+                  Login with XING
+                </a>
+              </dd>
+              <dd>
+                <a href="https://www.xing.com/app/share?op=button_builder">
+                  XING share button
+                </a>
+              </dd>
+                <dd>
+                  <a href="https://www.xing.com/app/user?op=downloads">
+                    Downloads
+                  </a>
+                </dd>
+            </dl>
+
+          </div>
+
+          <div class="foundation-col-4">
+            <dl class="footer-links last">
+              <dt>Products &amp; Solutions</dt>
+              <dd>
+                  <a href="https://www.xing.com/upsell/premium?reagent=uplt_98">
+                    Premium membership
+                  </a>
+              </dd>
+
+                <dd>
+                  <a href="https://www.xing.com/upsell/projobs?reagent=uplt_205">
+                    ProJobs add-on
+                  </a>
+                </dd>
+
+              <dd>
+                <a href="https://recruiting.xing.com/en/" target="recruiting">
+                  Recruiting with XING
+                </a>
+              </dd>
+              <dd>
+                <a href="https://werben.xing.com/en/" target="werben">
+                  Advertise on XING
+                </a>
+              </dd>
+
+
+              <dd>
+                <a href="https://en.xing-events.com" target="amiando">
+                  Ticketing and event promotion
+                </a>
+              </dd>
+
+              <dd>
+                <a href="https://businesspages.xing.com/" target="businesspages">
+                  Business Pages
+                </a>
+              </dd>
+
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script async>
+    (function() {
+      document.getElementById('quicklinks').addEventListener('click', function(e) {
+        var p = e.target.parentElement;
+
+        if(e.target.nodeName === 'DT') {
+          p.className = 'footer-links toggle-' + (p.className.indexOf('toggle-open') > -1 ? 'close' : 'open');
+        }
+      });
+    })();
+  </script>
+
+
+  <div id="projobs-footer-upsell">
+    <div class="content-center">
+        <div class="foundation-collapsable">&nbsp;</div>
+      <div class="foundation-grid-space">
+        <div class="foundation-row">
+          <div class="foundation-col-12">
+              <img width="726" height="20" class="projobs-footer-upsell-en" src="https://www.xing.com/assets/frontend_minified/img/shared/transparent_r1.gif" alt="Transparent r1" />
+            <a href="https://www.xing.com/upsell/projobs?reagent=uplt_222" class="projobs-footer-upsell-button projobs-footer-upsell-button-cta">
+              <button class="element-form-button-solid-lime" type="button">Go to ProJobs</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="footer-legal">
+  <div class="content-center">
+      <div class="foundation-collapsable">&nbsp;</div>
+    <div class="foundation-grid-space">
+      <div class="foundation-row">
+        <div class="foundation-col-12">
+          <nav>
+            <ul>
+              <li>
+                <a href="https://www.xing.com/imprint">
+                  About this site
+                </a>
+              </li>
+              <li>
+                <a href="https://www.xing.com/terms">
+                  Terms &amp; Conditions
+                </a>
+              </li>
+              <li>
+                <a href="https://www.xing.com/privacy">
+                  Privacy Policy
+                </a>
+              </li>
+                <li>
+                  <a href="https://corporate.xing.com/english/company/security-at-xing/" target="security_at_xing">
+                    Security
+                  </a>
+                </li>
+                <li class="pos-rel footer-language-chooser">Language: <a href="https://www.xing.com/app/settings?op=language" class="dropdown-link" data-simplelayer="next" >English</a>
+                  <div class="dropdown" style="display: none;">
+                    <ul>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=en" hreflang="en" title="View this page in English">
+                          English
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=de" hreflang="de" title="View this page in German">
+                          Deutsch
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=es" hreflang="es" title="View this page in Spanish">
+                          Espa&ntilde;ol
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=fr" hreflang="fr" title="View this page in French">
+                          Fran&ccedil;ais
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=it" hreflang="it" title="View this page in Italian">
+                          Italiano
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=pt" hreflang="pt" title="View this page in Portuguese">
+                          Portugu&ecirc;s
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=nl" hreflang="nl" title="View this page in Dutch">
+                          Nederlands
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=zh" hreflang="zh" title="View this page in Chinese">
+                          &#20013;&#25991;
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=ru" hreflang="ru" title="View this page in Russian">
+                          &#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;&#160;
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=pl" hreflang="pl" title="View this page in Polish">
+                          Polski
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.xing.com/app/user?op=switchlanguage;lang=tr" hreflang="tr" title="View this page in Turkish">
+                          T&uuml;rk&ccedil;e
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-copyright">
+  <div class="content-center">
+    <div class="foundation-grid-space">
+      <div class="foundation-row">
+        <div class="foundation-col-12">
+          &copy; XING AG | All rights reserved
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </footer>
+
+  </div>
+
+  
+
+          <div style="display:none;">
+        <script>
+          var s_account = "xingcomprod";
+        </script>
+        <script src='https://www.xing.com/assets/frontend_minified/js/sc-6556e02f7c22f9b1508236ca57dee409.js'></script>
+        <script>
+          __dcdone = false;s.channel='43616d707573';s.prop12='73747564656e74';s.prop5='30';s.prop14='656e';s.prop7='30';s.prop15='6d';s.prop4='756e646566696e6564';s.prop8='30';s.prop6='3730';s.prop16='6c6f676765645f696e';s.prop3='37363237623434343634373734326566';s.prop9='30';s.prop1='747a';s.hier1='6164646974696f6e616c';s.pageName='43616d7075732f6669656c645f6f665f737475646965732f696e646578';s.prop11='30';s.prop10='756e646566696e6564';s.eVar45='32';s.eVar29='';s.eVar3='37363237623434343634373734326566';s.eVar19='30';s.eVar25='78696e67';        s.useForcedLinkTracking = false;
+        s.t();
+
+        </script>
+        </div>
+<div><div class="feedback-rotated feedback-customize"><a data-color="magenta" target="_blank" href="https://indivsurvey.de/umfrage/41203/7Qv7ZV">Feedback</a></div></div><script>(function(o,v,e,r,t,a,g){o[t]=o[t]||function(){
+(o[t].q=o[t].q||[]).push(arguments)},o[t].d=new Date(),o[t].v=3,o[t].vl=r;
+a=v.createElement(e),g=v.getElementsByTagName(e)[0];a.async=1;
+a.src='//cdn.overheat.it/'+r+'.js';g.parentNode.insertBefore(a,g);
+})(window,document,'script','1a8eca0e9d668ebe83c36697e956cff2','overheat');</script><div class="noscript"></div><script>window.fbAsyncInit = function() {
+  FB.init({
+    appId      : "1136545039696712",
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v2.5'
+  });
+};
+
+(function(d, s, id){
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {window.fbAsyncInit(); return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script><script async="true" src="//platform.twitter.com/widgets.js" type="text/javascript"></script><script>xing.ready(function(){
+  CampusApp.Tracking.pageName = "_Campus/field_of_studies/index"
+  CampusApp.CurrentUser.id = 25525555
+})</script>
+</body>
+
+
+  
+
+</html>

@@ -1,0 +1,24 @@
+body{
+	margin: 2px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:px;
+    width:90px;
+    float:left;
+    padding:10px;	      
+}
+.navbar-default{
+	background-color:#2F4F4F;
+}
+.jumbotron{
+	background: url('../img/prback.png')no-repeat;
+  background-position: right;
+}
+.panel-heading{
+	margin: 0px;
+}
+ul{
+	list-style: none;
+}

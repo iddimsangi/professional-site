@@ -1,0 +1,31 @@
+/*style sheet*/
+.container{
+ width: 990px;
+ min-height: 80%;
+}
+header{
+	padding: 20px;
+	background-color: #009;
+}
+#navbar{
+	width:200px;
+	min-height:350px;
+	background-color:#000;
+	float: right;  
+
+}
+.column{
+	width:500px;
+	background-color:#090;
+	min-height:350px; 
+	float:right;
+}
+.aside{
+	background-color: #999;
+	min-height:350px;
+}
+.footer{
+	padding:10px;
+	background-color:#eee;
+	overflow:hidden;   
+}

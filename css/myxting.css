@@ -16,9 +16,11 @@ body{
 	background: url('../img/prback.png')no-repeat;
   background-position: right;
 }
-.panel-heading{
+.mycontent.panel-heading{
 	margin: 0px;
+    background: url('../img/colorx.jpg')no-repeat;
 }
-ul{
-	list-style: none;
+#content:{
+background: url('../img/back.jpg')no-repeat;
+  background-position: right;
 }
